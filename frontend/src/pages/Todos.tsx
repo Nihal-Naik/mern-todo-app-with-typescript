@@ -17,7 +17,7 @@ const Todos = () => {
 
     const getlist = async () => {
         try {
-            const response = await fetch("http://localhost:3000/api/app/todos", {
+            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/app/todos`, {
                 method: "GET",
                 credentials: "include",
             })
@@ -32,7 +32,7 @@ const Todos = () => {
 
     const handleStatusChange = async (id: string, newStatus: boolean) => {
         try {
-            const response = await fetch(`http://localhost:3000/api/app/todos/${id}/status`, {
+            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/app/todos/${id}/status`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
@@ -55,7 +55,7 @@ const Todos = () => {
 
     const handledelete = async (id: string) => {
         try {
-            const response = await fetch("http://localhost:3000/api/app/deletetodo", {
+            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/app/deletetodo`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" },
                 credentials: "include",

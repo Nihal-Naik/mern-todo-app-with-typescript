@@ -12,7 +12,7 @@ const App = () => {
   const navigate=useNavigate()
    const handleauth=async () => {
     try {
-      const response=await fetch("http://localhost:3000/api/auth/checkauth",{
+      const response=await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/auth/checkauth`,{
         method:"GET",
         credentials:"include",
       })

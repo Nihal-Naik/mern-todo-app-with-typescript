@@ -20,7 +20,7 @@ const Signup = () => {
 
     const onSubmit: SubmitHandler<Inputs> = async(data) => {
         try {
-          const response=await fetch("http://localhost:3000/api/auth/signup",{
+          const response=await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/auth/signup`,{
             method:"POST",
             headers:{"content-type":"application/json"},
             body:JSON.stringify(data)

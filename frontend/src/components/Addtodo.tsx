@@ -20,7 +20,7 @@ const Addtodo: React.FC<AddtodoProps> = ({ addform, setaddform,getlist }) => {
 
     const onSubmit: SubmitHandler<Inputs> = async (data) => {
         try {
-            const response = await fetch("http://localhost:3000/api/app/addtodo", {
+            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/app/addtodo`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 credentials: "include",
