@@ -11,4 +11,5 @@ when running locally -
 fork this repo
 run npm i in backend and frontend folders
 then run npm run dev in both folders to start the app in development
-or you can type npm run build then npm run start in backend folder when doing this no need to go in frontend folder , both frontend and backend will run on same port
+the below step is only if you want to run both frontend and backend on same port
+or you can type npm run build then npm run start in backend folder and run npm run build in frontend folder , both frontend and backend will run on same port
